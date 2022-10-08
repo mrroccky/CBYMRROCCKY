@@ -1,0 +1,28 @@
+/*
+    Write a program to copy of enter string into another without using strcpy function of
+    string.h header file.
+*/
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+    static char a[50],b[50];
+    int len=0,i=0,count;
+    clrscr();
+    printf("Enter the string\n");
+    scanf("%s",&a);
+
+    while(a[i]!='\0')
+    {
+       len++;
+       i++;
+    }
+    i=0;
+    while(i<len)
+    {
+       b[i]=a[i];
+       i++;
+    }
+    printf("Copied string is=%s",b);
+    getch();
+}
